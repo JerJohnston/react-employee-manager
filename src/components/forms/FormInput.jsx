@@ -30,7 +30,7 @@ import styled from 'styled-components';
 
 const FormInput = (props) => {
     return ( 
-        <FormInputStyles>
+        <FormInputStyles {...props}>
             <label htmlFor={props.id}>{props.label}</label>
             <input type={props.type} id={props.id} name={props.name}/>
         </FormInputStyles>
