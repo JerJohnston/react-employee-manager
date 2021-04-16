@@ -5,7 +5,7 @@ import {Redirect} from 'react-router-dom';
 import firebaseApp from './../firebase/firebaseConfig';
 import FormInput from 'components/forms/FormInput';
 import Button from 'components/buttons/Button';
-import e from 'express';
+
 
 const RegisterPageStyles = styled.aside`
     max-width: 23.75rem;
@@ -40,7 +40,7 @@ const RegisterPage = (props) => {
         firebaseApp.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
             setIsValid(true);
-            console.log('click')
+            
         })
         .catch(error => {
             console.log(error.code)
